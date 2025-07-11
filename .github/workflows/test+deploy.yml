@@ -1,6 +1,8 @@
 name: Test and DeployProject
 on: [push, pull_request, workflow_dispatch]
-
+permissions:  # added using https://github.com/step-security/secure-repo
+  contents: read
+  pull-requests: write
 jobs:
     test:
         runs-on: ubuntu-latest
